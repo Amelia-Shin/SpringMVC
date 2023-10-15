@@ -49,6 +49,8 @@ public class RequestBodyJsonController {
      * 생략하게 되면 @ModelAttribute HelloData helloData 가 되어버림
      * String, int, Integer 같은 단순 타입 = @RequestParam 으로 처리 , 나머진 @ModelAttribute
      * 따라서 HTTP 메시지 바디가 아니라 요청 파라미터를 처리하게 된다.
+     * PostMapping 으로 JSON 메시지 바디를 던져주는데 그걸 처리하지 못하고,
+     * request-body-json-v3?username=shin&age=20 이런식으로 들어온 경우를 처리함.
      * */
     @ResponseBody
     @PostMapping("/request-body-json-v3")
